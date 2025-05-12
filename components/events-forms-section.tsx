@@ -9,9 +9,18 @@ import { forms } from "@/data/forms"
 import { formatDate } from "@/lib/utils"
 
 export function EventsFormsSection() {
+  // Group forms by category
+  const formsByCategory = forms.reduce((acc, form) => {
+    if (!acc[form.category]) {
+      acc[form.category] = []
+    }
+    acc[form.category].push(form)
+    return acc
+  }, {} as Record<string, typeof forms>)
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-      <Card>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <Card className="h-full">
         <CardHeader className="bg-ksahc-blue text-white">
           <div className="flex items-center justify-between">
             <CardTitle className="text-xl">Events and Activities</CardTitle>
@@ -64,10 +73,10 @@ export function EventsFormsSection() {
             </Dialog>
           </div>
         </CardHeader>
-        <CardContent className="p-4">
+        <CardContent className="p-4 flex-1">
           {events.length > 0 && (
-            <div className="flex flex-col md:flex-row gap-4">
-              <div className="md:w-1/3 relative h-40 rounded-md overflow-hidden">
+            <div className="flex flex-col md:flex-row gap-4 h-full">
+              <div className="md:w-1/3 relative h-48 rounded-md overflow-hidden">
                 <Image
                   src={events[0].image || "/placeholder.svg"}
                   alt={events[0].title}
@@ -75,7 +84,7 @@ export function EventsFormsSection() {
                   className="object-cover"
                 />
               </div>
-              <div className="flex-1">
+              <div className="flex-1 flex flex-col">
                 <h3 className="font-medium text-lg mb-2">{events[0].title}</h3>
                 <div className="flex items-center text-sm text-muted-foreground mb-1">
                   <Calendar className="h-4 w-4 mr-1" />
@@ -85,8 +94,8 @@ export function EventsFormsSection() {
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{events[0].location}</span>
                 </div>
-                <p className="text-sm mb-3 line-clamp-2">{events[0].description}</p>
-                <Button variant="outline" size="sm">
+                <p className="text-sm mb-3 line-clamp-3 flex-1">{events[0].description}</p>
+                <Button variant="outline" size="sm" className="mt-auto">
                   Read More
                 </Button>
               </div>
@@ -95,24 +104,38 @@ export function EventsFormsSection() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="h-full">
         <CardHeader className="bg-ksahc-blue text-white">
-          <CardTitle className="text-xl">Download Forms</CardTitle>
+          <div className="flex items-center justify-between">
+            <CardTitle className="text-xl">Download Forms</CardTitle>
+            <Link href="/resources/forms">
+              <Button variant="link" className="text-white p-0 h-auto">
+                View All <ChevronRight className="h-4 w-4 ml-1" />
+              </Button>
+            </Link>
+          </div>
         </CardHeader>
-        <CardContent className="p-4">
-          <ul className="space-y-2">
-            {forms.map((form, index) => (
-              <li key={index}>
-                <Link href={form.url} className="flex items-center p-2 hover:bg-muted rounded-md transition-colors">
-                  <FileText className="h-5 w-5 mr-3 text-primary" />
-                  <div>
-                    <p className="font-medium">{form.title}</p>
-                    <p className="text-xs text-muted-foreground">{form.description}</p>
-                  </div>
-                </Link>
-              </li>
+        <CardContent className="p-4 flex-1">
+          <div className="space-y-4 h-full">
+            {Object.entries(formsByCategory).map(([category, categoryForms]) => (
+              <div key={category}>
+                <h3 className="font-medium text-sm text-muted-foreground mb-2">{category}</h3>
+                <ul className="space-y-2">
+                  {categoryForms.slice(0, 2).map((form, index) => (
+                    <li key={index}>
+                      <Link href={form.url} className="flex items-center p-2 hover:bg-muted rounded-md transition-colors">
+                        <FileText className="h-5 w-5 mr-3 text-primary" />
+                        <div>
+                          <p className="font-medium">{form.title}</p>
+                          <p className="text-xs text-muted-foreground">{form.description}</p>
+                        </div>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
+          </div>
         </CardContent>
       </Card>
     </div>

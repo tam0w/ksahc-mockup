@@ -67,7 +67,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto py-4">
+      <div className="container mx-auto py-4 w-max">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4 md:gap-8">
             <div className="hidden md:block">
@@ -76,20 +76,25 @@ export function Header() {
                 alt="Chief Minister of Karnataka"
                 width={80}
                 height={80}
-                className="rounded-md"
+                className="rounded-md object-cover"
               />
               <p className="text-xs text-center mt-1">Hon'ble Chief Minister</p>
               <p className="text-xs text-center">Govt. of Karnataka</p>
             </div>
 
-            <div className="flex items-center">
-              <Image src="/emblem.png" alt="Karnataka Emblem" width={60} height={60} />
-              <Image src="/logo.jpeg" alt="KSAHC Logo" width={60} height={60} className="ml-2" />
-              <div className="ml-4">
-                <h1 className="text-lg md:text-xl font-bold">Karnataka State Allied & Healthcare Council</h1>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4">
+                <Image src="/logo.jpeg" alt="KSAHC Logo" width={80} height={80} className="object-contain" />
+              </div>
+              <div className="flex-1">
+                <h1 className="text-lg md:text-xl font-bold leading-tight">Karnataka State Allied & Healthcare Council</h1>
                 <p className="text-xs md:text-sm text-muted-foreground">
                   Medical Education Department, Government of Karnataka
                 </p>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <Image src="/emblem.png" alt="Karnataka Emblem" width={80} height={80} className="object-contain" />
               </div>
             </div>
 
@@ -99,7 +104,7 @@ export function Header() {
                 alt="Minister for Medical Education"
                 width={80}
                 height={80}
-                className="rounded-md"
+                className="rounded-md object-cover"
               />
               <p className="text-xs text-center mt-1">Hon'ble Minister</p>
               <p className="text-xs text-center">Medical Education</p>

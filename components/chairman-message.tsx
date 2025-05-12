@@ -17,7 +17,7 @@ export function ChairmanMessage() {
               height={200}
               className="rounded-full mx-auto mb-4"
             />
-            <h3 className="font-medium text-center">Dr. Rajesh Kumar</h3>
+            <h3 className="font-medium text-center">Dr. UT Ifthikhar Fareed</h3>
             <p className="text-sm text-muted-foreground text-center">Chairman, KSAHC</p>
           </div>
           <div className="flex-1">

@@ -18,69 +18,69 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-ksahc-blue text-white">
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid gap-8 md:grid-cols-3">
-          <div>
-            <h3 className="mb-4 text-lg font-medium">Disclaimer</h3>
-            <p className="text-sm">
+    <footer className="bg-gradient-to-b from-ksahc-blue to-ksahc-blue/90 text-white">
+      <div className="container mx-auto px-6 py-12">
+        <div className="grid gap-12 md:grid-cols-3">
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold tracking-tight">Disclaimer</h3>
+            <p className="text-sm leading-relaxed text-white/90">
               The contents of this website are for informational purposes only. While every effort is made to ensure
               accuracy, the Karnataka State Allied & Healthcare Council does not guarantee the accuracy, completeness,
               or reliability of the information. Users are advised to verify information independently.
             </p>
           </div>
 
-          <div>
-            <h3 className="mb-4 text-lg font-medium">Website Policies</h3>
-            <ul className="space-y-2 text-sm">
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold tracking-tight">Website Policies</h3>
+            <ul className="space-y-3 text-sm">
               <li>
-                <button onClick={() => openDialog("copyright")} className="hover:underline">
+                <button onClick={() => openDialog("copyright")} className="transition-colors hover:text-white/80 hover:underline">
                   Copyright Policy
                 </button>
               </li>
               <li>
-                <button onClick={() => openDialog("hyperlinking")} className="hover:underline">
+                <button onClick={() => openDialog("hyperlinking")} className="transition-colors hover:text-white/80 hover:underline">
                   Hyperlinking Policy
                 </button>
               </li>
               <li>
-                <button onClick={() => openDialog("security")} className="hover:underline">
+                <button onClick={() => openDialog("security")} className="transition-colors hover:text-white/80 hover:underline">
                   Security Policy
                 </button>
               </li>
               <li>
-                <button onClick={() => openDialog("terms")} className="hover:underline">
+                <button onClick={() => openDialog("terms")} className="transition-colors hover:text-white/80 hover:underline">
                   Terms & Conditions
                 </button>
               </li>
               <li>
-                <button onClick={() => openDialog("privacy")} className="hover:underline">
+                <button onClick={() => openDialog("privacy")} className="transition-colors hover:text-white/80 hover:underline">
                   Privacy Policy
                 </button>
               </li>
             </ul>
           </div>
 
-          <div>
-            <h3 className="mb-4 text-lg font-medium">Accessibility</h3>
-            <ul className="space-y-2 text-sm">
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold tracking-tight">Accessibility</h3>
+            <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/sitemap" className="hover:underline">
+                <Link href="/sitemap" className="transition-colors hover:text-white/80 hover:underline">
                   Sitemap
                 </Link>
               </li>
               <li>
-                <button onClick={() => openDialog("help")} className="hover:underline">
+                <button onClick={() => openDialog("help")} className="transition-colors hover:text-white/80 hover:underline">
                   Help
                 </button>
               </li>
               <li>
-                <button onClick={() => openDialog("screen-reader")} className="hover:underline">
+                <button onClick={() => openDialog("screen-reader")} className="transition-colors hover:text-white/80 hover:underline">
                   Screen Reader Access
                 </button>
               </li>
               <li>
-                <Link href="/accessibility-guidelines" className="hover:underline">
+                <Link href="/accessibility-guidelines" className="transition-colors hover:text-white/80 hover:underline">
                   Accessibility Guidelines
                 </Link>
               </li>
@@ -88,8 +88,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-white/20 pt-6 text-center text-sm">
-          <div className="flex flex-wrap justify-between items-center">
+        <div className="mt-12 border-t border-white/10 pt-8">
+          <div className="flex flex-wrap justify-between items-center gap-4 text-sm text-white/80">
             <div>
               <p>Last Updated: May 12, 2023</p>
             </div>
@@ -101,50 +101,50 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-4">
+          <div className="mt-6 text-center space-y-2 text-sm text-white/80">
             <p>© {currentYear} Karnataka State Allied & Healthcare Council. All rights reserved.</p>
-            <p className="mt-2">
+            <p>
               Content Owned by Karnataka State Allied & Healthcare Council, Government of Karnataka
             </p>
-            <p className="mt-1">Designed and Developed by Centre for e-Governance, Government of Karnataka</p>
+            <p>Designed and Developed by Centre for e-Governance, Government of Karnataka</p>
           </div>
         </div>
 
-        <div className="mt-6 flex flex-wrap justify-center gap-4">
-          <Link href="https://meity.gov.in/" target="_blank" rel="noopener noreferrer">
+        <div className="mt-8 flex flex-wrap justify-center gap-6">
+          <Link href="https://meity.gov.in/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
             <Image
               src="/aa.png"
               alt="MeitY Logo"
               width={80}
               height={40}
-              className="bg-white p-1 rounded"
+              className="bg-white/10 backdrop-blur-sm p-2 rounded-lg hover:bg-white/20 transition-colors"
             />
           </Link>
-          <Link href="https://www.digitalindia.gov.in/" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.digitalindia.gov.in/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
             <Image
               src="/bb.png"
               alt="Digital India Logo"
               width={80}
               height={40}
-              className="bg-white p-1 rounded"
+              className="bg-white/10 backdrop-blur-sm p-2 rounded-lg hover:bg-white/20 transition-colors"
             />
           </Link>
-          <Link href="https://data.gov.in/" target="_blank" rel="noopener noreferrer">
+          <Link href="https://data.gov.in/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
             <Image
               src="/cc.png"
               alt="Data.gov.in Logo"
               width={80}
               height={40}
-              className="bg-white p-1 rounded"
+              className="bg-white/10 backdrop-blur-sm p-2 rounded-lg hover:bg-white/20 transition-colors"
             />
           </Link>
-          <Link href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
             <Image
               src="/dd.png"
               alt="India.gov.in Logo"
               width={80}
               height={40}
-              className="bg-white p-1 rounded"
+              className="bg-white/10 backdrop-blur-sm p-2 rounded-lg hover:bg-white/20 transition-colors"
             />
           </Link>
         </div>
@@ -152,11 +152,11 @@ export function Footer() {
 
       {/* Policy Dialogs */}
       <Dialog open={activeDialog === "copyright"} onOpenChange={closeDialog}>
-        <DialogContent className="sm:max-w-[600px]">
+        <DialogContent className="sm:max-w-[600px] bg-white/95 backdrop-blur-sm">
           <DialogHeader>
-            <DialogTitle>Copyright Policy</DialogTitle>
+            <DialogTitle className="text-xl font-semibold">Copyright Policy</DialogTitle>
           </DialogHeader>
-          <div className="space-y-4">
+          <div className="space-y-4 text-gray-700">
             <p>
               Material featured on this site may be reproduced free of charge after taking proper permission by sending
               a mail to us. However, the material has to be reproduced accurately and not to be used in a derogatory
@@ -173,11 +173,11 @@ export function Footer() {
       </Dialog>
 
       <Dialog open={activeDialog === "hyperlinking"} onOpenChange={closeDialog}>
-        <DialogContent className="sm:max-w-[600px]">
+        <DialogContent className="sm:max-w-[600px] bg-white/95 backdrop-blur-sm">
           <DialogHeader>
-            <DialogTitle>Hyperlinking Policy</DialogTitle>
+            <DialogTitle className="text-xl font-semibold">Hyperlinking Policy</DialogTitle>
           </DialogHeader>
-          <div className="space-y-4">
+          <div className="space-y-4 text-gray-700">
             <p>
               Links to external websites/portals: At many places in this website, you shall find links to other
               websites/ portals. These links have been placed for your convenience. Karnataka State Allied & Healthcare
@@ -198,11 +198,11 @@ export function Footer() {
       </Dialog>
 
       <Dialog open={activeDialog === "security"} onOpenChange={closeDialog}>
-        <DialogContent className="sm:max-w-[600px]">
+        <DialogContent className="sm:max-w-[600px] bg-white/95 backdrop-blur-sm">
           <DialogHeader>
-            <DialogTitle>Security Policy</DialogTitle>
+            <DialogTitle className="text-xl font-semibold">Security Policy</DialogTitle>
           </DialogHeader>
-          <div className="space-y-4">
+          <div className="space-y-4 text-gray-700">
             <p>
               We are committed to ensuring the security of this website. However, you recognize that your use of the
               site is at your sole risk. This Security Policy covers how we handle the security of this website.
@@ -222,11 +222,11 @@ export function Footer() {
       </Dialog>
 
       <Dialog open={activeDialog === "terms"} onOpenChange={closeDialog}>
-        <DialogContent className="sm:max-w-[600px]">
+        <DialogContent className="sm:max-w-[600px] bg-white/95 backdrop-blur-sm">
           <DialogHeader>
-            <DialogTitle>Terms & Conditions</DialogTitle>
+            <DialogTitle className="text-xl font-semibold">Terms & Conditions</DialogTitle>
           </DialogHeader>
-          <div className="space-y-4">
+          <div className="space-y-4 text-gray-700">
             <p>
               This website is designed, developed and maintained by Karnataka State Allied & Healthcare Council,
               Government of Karnataka.
@@ -252,11 +252,11 @@ export function Footer() {
       </Dialog>
 
       <Dialog open={activeDialog === "privacy"} onOpenChange={closeDialog}>
-        <DialogContent className="sm:max-w-[600px]">
+        <DialogContent className="sm:max-w-[600px] bg-white/95 backdrop-blur-sm">
           <DialogHeader>
-            <DialogTitle>Privacy Policy</DialogTitle>
+            <DialogTitle className="text-xl font-semibold">Privacy Policy</DialogTitle>
           </DialogHeader>
-          <div className="space-y-4">
+          <div className="space-y-4 text-gray-700">
             <p>
               This website does not automatically capture any specific personal information from you (like name, phone
               number or e-mail address), that allows us to identify you individually.
@@ -282,30 +282,30 @@ export function Footer() {
       </Dialog>
 
       <Dialog open={activeDialog === "help"} onOpenChange={closeDialog}>
-        <DialogContent className="sm:max-w-[600px]">
+        <DialogContent className="sm:max-w-[600px] bg-white/95 backdrop-blur-sm">
           <DialogHeader>
-            <DialogTitle>Help</DialogTitle>
+            <DialogTitle className="text-xl font-semibold">Help</DialogTitle>
           </DialogHeader>
-          <div className="space-y-4">
-            <h3 className="text-lg font-medium">Navigating the Website</h3>
+          <div className="space-y-6 text-gray-700">
+            <h3 className="text-lg font-medium text-gray-900">Navigating the Website</h3>
             <p>
               The website has a user-friendly interface with a navigation menu at the top. You can click on the menu
               items to access different sections of the website.
             </p>
 
-            <h3 className="text-lg font-medium">Downloading Forms</h3>
+            <h3 className="text-lg font-medium text-gray-900">Downloading Forms</h3>
             <p>
               To download forms, navigate to the "Downloads & Resources" section and click on "Forms". You can then
               download the required forms in PDF format.
             </p>
 
-            <h3 className="text-lg font-medium">Registration Process</h3>
+            <h3 className="text-lg font-medium text-gray-900">Registration Process</h3>
             <p>
               For registration as a healthcare professional, visit the "Services Offered" section and click on
               "Registration". Follow the instructions provided on the page to complete the registration process.
             </p>
 
-            <h3 className="text-lg font-medium">Contact Information</h3>
+            <h3 className="text-lg font-medium text-gray-900">Contact Information</h3>
             <p>
               If you need further assistance, please visit the "Contact Us" page for our contact details or use the
               feedback form accessible through the "Feedback" button on the right side of the page.
@@ -315,23 +315,23 @@ export function Footer() {
       </Dialog>
 
       <Dialog open={activeDialog === "screen-reader"} onOpenChange={closeDialog}>
-        <DialogContent className="sm:max-w-[600px]">
+        <DialogContent className="sm:max-w-[600px] bg-white/95 backdrop-blur-sm">
           <DialogHeader>
-            <DialogTitle>Screen Reader Access</DialogTitle>
+            <DialogTitle className="text-xl font-semibold">Screen Reader Access</DialogTitle>
           </DialogHeader>
-          <div className="space-y-4">
+          <div className="space-y-6 text-gray-700">
             <p>
               This website is designed to be accessible to all users, including those who use screen readers. We follow
               WCAG 2.1 guidelines to ensure our content is perceivable, operable, understandable, and robust.
             </p>
-            <h3 className="text-lg font-medium">Recommended Screen Readers</h3>
-            <ul className="list-disc pl-5 space-y-2">
+            <h3 className="text-lg font-medium text-gray-900">Recommended Screen Readers</h3>
+            <ul className="list-disc pl-5 space-y-3">
               <li>
                 <a
                   href="https://www.nvaccess.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline"
+                  className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
                 >
                   NVDA (NonVisual Desktop Access)
                 </a>{" "}
@@ -342,7 +342,7 @@ export function Footer() {
                   href="https://www.freedomscientific.com/products/software/jaws/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline"
+                  className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
                 >
                   JAWS (Job Access With Speech)
                 </a>{" "}
@@ -353,7 +353,7 @@ export function Footer() {
                   href="https://www.apple.com/accessibility/vision/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline"
+                  className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
                 >
                   VoiceOver
                 </a>{" "}
@@ -364,7 +364,7 @@ export function Footer() {
                   href="https://www.google.com/accessibility/products-features/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline"
+                  className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
                 >
                   TalkBack
                 </a>{" "}
@@ -375,7 +375,7 @@ export function Footer() {
                   href="https://help.gnome.org/users/orca/stable/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline"
+                  className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
                 >
                   Orca
                 </a>{" "}
@@ -384,7 +384,7 @@ export function Footer() {
             </ul>
             <p>
               If you encounter any accessibility issues on our website, please contact us at{" "}
-              <a href="mailto:accessibility@ksahc.karnataka.gov.in" className="text-primary hover:underline">
+              <a href="mailto:accessibility@ksahc.karnataka.gov.in" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">
                 accessibility@ksahc.karnataka.gov.in
               </a>
             </p>

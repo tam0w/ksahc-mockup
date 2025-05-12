@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ChevronLeft } from "lucide-react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Image from "next/image"
 
 export default function AboutPage() {
   return (
@@ -54,10 +55,15 @@ export default function AboutPage() {
 
                   <div className="border-t pt-8">
                     <h3 className="text-xl font-semibold mb-4">The KSAHC Logo</h3>
-                    <div className="flex flex-col md:flex-row gap-8 items-start">
-                      <div className="w-48 h-48 bg-gray-100 rounded-lg flex items-center justify-center">
-                        {/* Replace with actual logo image */}
-                        <div className="text-gray-400">Logo Image</div>
+                    <div className="flex flex-col md:flex-row gap-8 items-center">
+                      <div className="w-64 h-64 bg-white rounded-lg flex items-center justify-center p-4">
+                        <Image
+                          src="/logo.jpeg"
+                          alt="KSAHC Logo"
+                          width={300}
+                          height={300}
+                          className="object-contain"
+                        />
                       </div>
                       <div className="flex-1 space-y-4">
                         <div>
@@ -75,6 +81,10 @@ export default function AboutPage() {
                         <div>
                           <h4 className="font-medium mb-2">Color Scheme – Blue Tones</h4>
                           <p className="text-gray-600">The blue palette represents trust, reliability, and calm authority, closely associated with healthcare and lending the logo a professional yet approachable feel.</p>
+                        </div>
+                        <div>
+                          <h4 className="font-medium mb-2">Overall Significance</h4>
+                          <p className="text-gray-600">Together, these elements form a visual language that communicates strength, inclusivity, ethical governance, and excellence. The KSAHC logo is not merely decorative—it is a distilled expression of the Council's identity and its pivotal role in elevating allied healthcare in Karnataka.</p>
                         </div>
                       </div>
                     </div>
