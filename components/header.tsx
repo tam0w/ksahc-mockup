@@ -15,7 +15,26 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, Home, Info, AlertCircle } from "lucide-react"
+import { 
+  Menu, 
+  Home, 
+  Info, 
+  AlertCircle, 
+  Users, 
+  Briefcase, 
+  FileDown, 
+  HelpCircle, 
+  Phone, 
+  LogIn,
+  ClipboardList,
+  FileCheck,
+  GraduationCap,
+  BookOpen,
+  FileText,
+  Scale,
+  Newspaper,
+  Image as ImageIcon
+} from "lucide-react"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -36,7 +55,7 @@ export function Header() {
   }
 
   const isPageReady = (path: string) => {
-    const readyPages = ['/', '/about', '/resources/forms', '/contact']
+    const readyPages = ['/', '/about', '/resources/forms', '/contact', '/members']
     return readyPages.includes(path)
   }
 
@@ -53,7 +72,7 @@ export function Header() {
           <div className="flex items-center gap-4 md:gap-8">
             <div className="hidden md:block">
               <Image
-                src="/images/cm-photo.jpg"
+                src="/22.png"
                 alt="Chief Minister of Karnataka"
                 width={80}
                 height={80}
@@ -64,7 +83,8 @@ export function Header() {
             </div>
 
             <div className="flex items-center">
-              <Image src="/images/karnataka-emblem.png" alt="Karnataka Emblem" width={60} height={60} />
+              <Image src="/emblem.png" alt="Karnataka Emblem" width={60} height={60} />
+              <Image src="/logo.jpeg" alt="KSAHC Logo" width={60} height={60} className="ml-2" />
               <div className="ml-4">
                 <h1 className="text-lg md:text-xl font-bold">Karnataka State Allied & Healthcare Council</h1>
                 <p className="text-xs md:text-sm text-muted-foreground">
@@ -75,7 +95,7 @@ export function Header() {
 
             <div className="hidden md:block">
               <Image
-                src="/images/minister-photo.jpg"
+                src="/23_LE_upscale_balanced_x1.jpg"
                 alt="Minister for Medical Education"
                 width={80}
                 height={80}
@@ -104,12 +124,18 @@ export function Header() {
 
                   <NavigationMenuItem>
                     <Link href="/about" legacyBehavior passHref>
-                      <NavigationMenuLink className={navigationMenuTriggerStyle() + " hover:text-white hover:bg-white/10"}>ABOUT US</NavigationMenuLink>
+                      <NavigationMenuLink className={navigationMenuTriggerStyle() + " hover:text-white hover:bg-white/10"}>
+                        <Info className="h-4 w-4 mr-1" />
+                        ABOUT US
+                      </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger>MEMBERS</NavigationMenuTrigger>
+                    <NavigationMenuTrigger>
+                      <Users className="h-4 w-4 mr-1" />
+                      MEMBERS
+                    </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid gap-3 p-4 md:w-[400px]">
                         <li>
@@ -119,7 +145,10 @@ export function Header() {
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                               onClick={(e) => handleNavigation('/members', e)}
                             >
-                              <div className="text-sm font-medium leading-none">Council Members</div>
+                              <div className="text-sm font-medium leading-none flex items-center">
+                                <Users className="h-4 w-4 mr-2" />
+                                Council Members
+                              </div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                 View all members of the Karnataka State Allied & Healthcare Council
                               </p>
@@ -131,7 +160,10 @@ export function Header() {
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger>SERVICES OFFERED</NavigationMenuTrigger>
+                    <NavigationMenuTrigger>
+                      <Briefcase className="h-4 w-4 mr-1" />
+                      SERVICES OFFERED
+                    </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
                         <li>
@@ -141,7 +173,10 @@ export function Header() {
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                               onClick={(e) => handleNavigation('/services/registration', e)}
                             >
-                              <div className="text-sm font-medium leading-none">Registration</div>
+                              <div className="text-sm font-medium leading-none flex items-center">
+                                <ClipboardList className="h-4 w-4 mr-2" />
+                                Registration
+                              </div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                 Register as a healthcare professional
                               </p>
@@ -155,7 +190,10 @@ export function Header() {
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                               onClick={(e) => handleNavigation('/services/verification', e)}
                             >
-                              <div className="text-sm font-medium leading-none">Verification</div>
+                              <div className="text-sm font-medium leading-none flex items-center">
+                                <FileCheck className="h-4 w-4 mr-2" />
+                                Verification
+                              </div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                 Verify healthcare professional credentials
                               </p>
@@ -169,7 +207,10 @@ export function Header() {
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                               onClick={(e) => handleNavigation('/services/education', e)}
                             >
-                              <div className="text-sm font-medium leading-none">Education</div>
+                              <div className="text-sm font-medium leading-none flex items-center">
+                                <GraduationCap className="h-4 w-4 mr-2" />
+                                Education
+                              </div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                 Approved courses and institutions
                               </p>
@@ -183,7 +224,10 @@ export function Header() {
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                               onClick={(e) => handleNavigation('/services/guidelines', e)}
                             >
-                              <div className="text-sm font-medium leading-none">Guidelines</div>
+                              <div className="text-sm font-medium leading-none flex items-center">
+                                <BookOpen className="h-4 w-4 mr-2" />
+                                Guidelines
+                              </div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                 Professional practice guidelines
                               </p>
@@ -195,7 +239,10 @@ export function Header() {
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger>DOWNLOADS & RESOURCES</NavigationMenuTrigger>
+                    <NavigationMenuTrigger>
+                      <FileDown className="h-4 w-4 mr-1" />
+                      DOWNLOADS & RESOURCES
+                    </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
                         <li>
@@ -204,7 +251,10 @@ export function Header() {
                               href="/resources/forms"
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                             >
-                              <div className="text-sm font-medium leading-none">Forms</div>
+                              <div className="text-sm font-medium leading-none flex items-center">
+                                <FileText className="h-4 w-4 mr-2" />
+                                Forms
+                              </div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                 Download registration and other forms
                               </p>
@@ -218,7 +268,10 @@ export function Header() {
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                               onClick={(e) => handleNavigation('/resources/acts-rules', e)}
                             >
-                              <div className="text-sm font-medium leading-none">Acts & Rules</div>
+                              <div className="text-sm font-medium leading-none flex items-center">
+                                <Scale className="h-4 w-4 mr-2" />
+                                Acts & Rules
+                              </div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                 Acts, rules and regulations
                               </p>
@@ -232,7 +285,10 @@ export function Header() {
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                               onClick={(e) => handleNavigation('/resources/circulars', e)}
                             >
-                              <div className="text-sm font-medium leading-none">Circulars</div>
+                              <div className="text-sm font-medium leading-none flex items-center">
+                                <Newspaper className="h-4 w-4 mr-2" />
+                                Circulars
+                              </div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                 Official circulars and notifications
                               </p>
@@ -246,7 +302,10 @@ export function Header() {
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                               onClick={(e) => handleNavigation('/resources/gallery', e)}
                             >
-                              <div className="text-sm font-medium leading-none">Gallery</div>
+                              <div className="text-sm font-medium leading-none flex items-center">
+                                <ImageIcon className="h-4 w-4 mr-2" />
+                                Gallery
+                              </div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                 Photos and videos of events
                               </p>
@@ -259,13 +318,19 @@ export function Header() {
 
                   <NavigationMenuItem>
                     <Link href="/faqs" legacyBehavior passHref>
-                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>FAQs</NavigationMenuLink>
+                      <NavigationMenuLink className={navigationMenuTriggerStyle()} onClick={(e) => handleNavigation('/faqs', e)}>
+                        <HelpCircle className="h-4 w-4 mr-1" />
+                        FAQs
+                      </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
                     <Link href="/contact" legacyBehavior passHref>
-                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>CONTACT US</NavigationMenuLink>
+                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                        <Phone className="h-4 w-4 mr-1" />
+                        CONTACT US
+                      </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
                 </NavigationMenuList>
@@ -273,12 +338,13 @@ export function Header() {
             </nav>
 
             <div className="flex items-center gap-2">
-              <Link href="/login" className="hidden md:block">
+              <Link href="/login" className="hidden md:block" onClick={(e) => handleNavigation('/login', e)}>
                 <Button
                   variant="outline"
                   size="sm"
                   className="border-white/50 hover:bg-white/10 hover:text-white hover:border-white transition-all duration-200"
                 >
+                  <LogIn className="h-4 w-4 mr-1" />
                   LOGIN
                 </Button>
               </Link>
@@ -297,7 +363,8 @@ export function Header() {
                 <SheetContent side="left" className="w-[300px] sm:w-[400px]">
                   <div className="grid gap-4 py-4">
                     <Link href="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
-                      <Image src="/images/karnataka-emblem.png" alt="Karnataka Emblem" width={40} height={40} />
+                      <Image src="/emblem.png" alt="Karnataka Emblem" width={40} height={40} />
+                      <Image src="/logo.jpeg" alt="KSAHC Logo" width={40} height={40} className="ml-2" />
                       <div className="text-sm font-medium">
                         <div>Karnataka State Allied & Healthcare Council</div>
                       </div>
@@ -334,7 +401,10 @@ export function Header() {
                           Downloads & Resources
                         </Button>
                       </Link>
-                      <Link href="/faqs" onClick={() => setIsOpen(false)}>
+                      <Link href="/faqs" onClick={(e) => {
+                        setIsOpen(false)
+                        handleNavigation('/faqs', e)
+                      }}>
                         <Button variant="ghost" className="w-full justify-start">
                           FAQs
                         </Button>

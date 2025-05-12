@@ -11,11 +11,11 @@ export function ChairmanMessage() {
         <div className="flex flex-col md:flex-row gap-6 items-center">
           <div className="md:w-1/3 flex flex-col items-center">
             <Image
-              src="/images/chairman-photo.jpg"
+              src="/if2.jpeg"
               alt="Chairman"
               width={200}
               height={200}
-              className="rounded-md object-cover mb-2"
+              className="rounded-full mx-auto mb-4"
             />
             <h3 className="font-medium text-center">Dr. Rajesh Kumar</h3>
             <p className="text-sm text-muted-foreground text-center">Chairman, KSAHC</p>
@@ -44,7 +44,7 @@ export function ChairmanMessage() {
             <p className="mt-4 font-medium">
               Warm regards,
               <br />
-              Dr. Rajesh Kumar
+              Dr. UT Ifthikhar Fareed
               <br />
               Chairman, KSAHC
             </p>

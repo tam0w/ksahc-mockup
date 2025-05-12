@@ -113,7 +113,7 @@ export function Footer() {
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Link href="https://meity.gov.in/" target="_blank" rel="noopener noreferrer">
             <Image
-              src="/images/meity-logo.png"
+              src="/aa.png"
               alt="MeitY Logo"
               width={80}
               height={40}
@@ -122,7 +122,7 @@ export function Footer() {
           </Link>
           <Link href="https://www.digitalindia.gov.in/" target="_blank" rel="noopener noreferrer">
             <Image
-              src="/images/digital-india-logo.png"
+              src="/bb.png"
               alt="Digital India Logo"
               width={80}
               height={40}
@@ -131,7 +131,7 @@ export function Footer() {
           </Link>
           <Link href="https://data.gov.in/" target="_blank" rel="noopener noreferrer">
             <Image
-              src="/images/data-gov-logo.png"
+              src="/cc.png"
               alt="Data.gov.in Logo"
               width={80}
               height={40}
@@ -140,17 +140,8 @@ export function Footer() {
           </Link>
           <Link href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer">
             <Image
-              src="/images/india-gov-logo.png"
+              src="/dd.png"
               alt="India.gov.in Logo"
-              width={80}
-              height={40}
-              className="bg-white p-1 rounded"
-            />
-          </Link>
-          <Link href="https://www.pmindia.gov.in/" target="_blank" rel="noopener noreferrer">
-            <Image
-              src="/images/pm-india-logo.png"
-              alt="PM India Logo"
               width={80}
               height={40}
               className="bg-white p-1 rounded"

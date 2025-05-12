@@ -10,7 +10,7 @@ export function AboutSection() {
       <CardHeader className="bg-ksahc-blue text-white">
         <div className="flex items-center justify-between">
           <CardTitle className="text-xl">Karnataka State Allied and Healthcare Council</CardTitle>
-          <Link href="/about/about-ksahc">
+          <Link href="/about">
             <Button variant="link" className="text-white p-0 h-auto">
               Know More <ChevronRight className="h-4 w-4 ml-1" />
             </Button>
@@ -36,7 +36,7 @@ export function AboutSection() {
           </div>
           <div className="md:w-1/3 flex justify-center">
             <Image
-              src="/images/healthcare-logo.png"
+              src="/logo.jpeg"
               alt="KSAHC Logo"
               width={200}
               height={200}
@@ -46,7 +46,7 @@ export function AboutSection() {
         </div>
 
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Link href="/about/about-ksahc" className="block">
+          <Link href="/about/members" className="block">
             <Card className="h-full hover:border-primary/50 transition-colors">
               <CardContent className="p-4 flex flex-col items-center text-center">
                 <h3 className="font-medium mb-2">KSAHC Members</h3>
@@ -58,7 +58,7 @@ export function AboutSection() {
             </Card>
           </Link>
 
-          <Link href="/about/about-ksahc" className="block">
+          <Link href="/about" className="block">
             <Card className="h-full hover:border-primary/50 transition-colors">
               <CardContent className="p-4 flex flex-col items-center text-center">
                 <h3 className="font-medium mb-2">About Us</h3>
@@ -70,7 +70,7 @@ export function AboutSection() {
             </Card>
           </Link>
 
-          <Link href="/resources/acts-rules" className="block">
+          <Link href="/resources/acts" className="block">
             <Card className="h-full hover:border-primary/50 transition-colors">
               <CardContent className="p-4 flex flex-col items-center text-center">
                 <h3 className="font-medium mb-2">Council Act</h3>
