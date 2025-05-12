@@ -129,16 +129,6 @@ export const members: Member[] = [
     designation: "Medical Superintendent, SDM Narayan Heart Centre",
     image: "/20.png",
   },
-  {
-    name: "ABHILASH, P. V.",
-    designation: "Laxmi Memorial Education Trust",
-    image: "/21.png",
-  },
-  {
-    name: "SAVITHA RAVINDRA",
-    designation: "M S Ramaiah Hospital - Gokula Education Foundation (GEF)",
-    image: "/22.png",
-  },
 ]
 
 export const boardPresidents: BoardPresident[] = [
