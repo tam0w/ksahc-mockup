@@ -19,7 +19,7 @@ export function EventsFormsSection() {
   }, {} as Record<string, typeof forms>)
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
       <Card className="h-full">
         <CardHeader className="bg-ksahc-blue text-white">
           <div className="flex items-center justify-between">
@@ -73,18 +73,18 @@ export function EventsFormsSection() {
             </Dialog>
           </div>
         </CardHeader>
-        <CardContent className="p-4 flex-1">
+        <CardContent className="p-4 flex-1 h-max">
           {events.length > 0 && (
             <div className="flex flex-col md:flex-row gap-4 h-full">
-              <div className="md:w-1/3 relative h-48 rounded-md overflow-hidden">
-                <Image
-                  src={events[0].image || "/placeholder.svg"}
-                  alt={events[0].title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="flex-1 flex flex-col">
+              <div className="flex-1 flex flex-col space-y-2">
+                <div className="relative h-72 rounded-md overflow-hidden">
+                  <Image
+                    src={events[0].image || "/placeholder.svg"}
+                    alt={events[0].title}
+                    fill
+                    className="object-cover h-full"
+                  />
+                </div>
                 <h3 className="font-medium text-lg mb-2">{events[0].title}</h3>
                 <div className="flex items-center text-sm text-muted-foreground mb-1">
                   <Calendar className="h-4 w-4 mr-1" />
@@ -94,7 +94,7 @@ export function EventsFormsSection() {
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{events[0].location}</span>
                 </div>
-                <p className="text-sm mb-3 line-clamp-3 flex-1">{events[0].description}</p>
+                <p className="text-sm mb-3 flex-1">{events[0].description}</p>
                 <Button variant="outline" size="sm" className="mt-auto">
                   Read More
                 </Button>
@@ -115,19 +115,19 @@ export function EventsFormsSection() {
             </Link>
           </div>
         </CardHeader>
-        <CardContent className="p-4 flex-1">
-          <div className="space-y-4 h-full">
+        <CardContent className="p-6 flex-1">
+          <div className="space-y-6">
             {Object.entries(formsByCategory).map(([category, categoryForms]) => (
               <div key={category}>
-                <h3 className="font-medium text-sm text-muted-foreground mb-2">{category}</h3>
-                <ul className="space-y-2">
+                <h3 className="font-medium text-base mb-3">{category}</h3>
+                <ul className="space-y-3">
                   {categoryForms.slice(0, 2).map((form, index) => (
                     <li key={index}>
-                      <Link href={form.url} className="flex items-center p-2 hover:bg-muted rounded-md transition-colors">
-                        <FileText className="h-5 w-5 mr-3 text-primary" />
+                      <Link href={form.url} className="flex items-center p-3 hover:bg-muted rounded-md transition-colors">
+                        <FileText className="h-6 w-6 mr-4 text-primary" />
                         <div>
-                          <p className="font-medium">{form.title}</p>
-                          <p className="text-xs text-muted-foreground">{form.description}</p>
+                          <p className="font-medium text-base">{form.title}</p>
+                          <p className="text-sm text-muted-foreground mt-1">{form.description}</p>
                         </div>
                       </Link>
                     </li>

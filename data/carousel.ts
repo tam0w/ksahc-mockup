@@ -6,17 +6,17 @@ export interface CarouselImage {
 
 export const carouselImages: CarouselImage[] = [
   {
-    src: "/iamge1.jpg",
+    src: "/DSC_3439.JPG",
     alt: "Karnataka State Allied & Healthcare Council Event",
     caption: "Inauguration ceremony of the Karnataka State Allied & Healthcare Council",
   },
   {
-    src: "/newoffice.jpeg",
+    src: "/DSC_3450 (1).JPG",
     alt: "Healthcare Professionals Meeting",
     caption: "Annual meeting of healthcare professionals in Karnataka",
   },
   {
-    src: "/image2.jpeg",
+    src: "/DSC_3528.JPG",
     alt: "Medical Education Workshop",
     caption: "Workshop on advancements in medical education",
   },

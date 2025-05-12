@@ -13,7 +13,7 @@ export const events: Event[] = [
     location: "Bengaluru International Convention Centre",
     description:
       "Join us for the annual conference focusing on advancements in allied healthcare professions. The event will feature keynote speakers, panel discussions, and networking opportunities.",
-    image: "/events3.jpg",
+    image: "/DSC_3439.JPG",
   },
   {
     title: "Workshop on Healthcare Ethics",
@@ -21,7 +21,7 @@ export const events: Event[] = [
     location: "KSAHC Training Centre, Mysuru",
     description:
       "A comprehensive workshop on ethical practices in healthcare professions. This interactive session will cover case studies and practical scenarios.",
-    image: "/events4.jpeg",
+    image: "/DSC_3450 (1).JPG",
   },
   {
     title: "Rural Healthcare Outreach Program",
@@ -29,7 +29,7 @@ export const events: Event[] = [
     location: "Various Districts of Karnataka",
     description:
       "A month-long program to bring allied healthcare services to rural areas of Karnataka. Healthcare professionals will provide services and conduct awareness sessions.",
-    image: "/events5.jpeg",
+    image: "/DSC_3528.JPG",
   },
   {
     title: "Professional Development Seminar",
@@ -37,7 +37,7 @@ export const events: Event[] = [
     location: "Hotel Grand Ashok, Bengaluru",
     description:
       "A seminar focused on career advancement and professional growth for allied healthcare professionals. Learn about the latest trends and opportunities in the field.",
-    image: "/events6.JPG",
+    image: "/PFP_8784.JPG",
   },
   {
     title: "Healthcare Technology Summit",
@@ -45,7 +45,7 @@ export const events: Event[] = [
     location: "ITC Gardenia, Bengaluru",
     description:
       "Explore the latest technological innovations in healthcare. This summit brings together healthcare professionals and technology experts to discuss digital transformation in healthcare.",
-    image: "/event2.jpg",
+    image: "/PFP_8842.JPG",
   },
   {
     title: "International Healthcare Symposium",
@@ -53,6 +53,6 @@ export const events: Event[] = [
     location: "Taj West End, Bengaluru",
     description:
       "An international symposium focusing on global healthcare practices and standards. Network with healthcare professionals from around the world and learn about international best practices.",
-    image: "/gallery1.jpg",
+    image: "/PFP_8844.JPG",
   }
 ]
