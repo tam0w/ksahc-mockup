@@ -1,4 +1,6 @@
-you should not need a readme to run this.
+# README
+
+my vibe coding stack is INSANE. you dont need a readme to run this.
 
 ## Visuals
 
